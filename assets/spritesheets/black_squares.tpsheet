@@ -1,0 +1,618 @@
+{
+	"textures": [
+		{
+			"image": "black_squares.png",
+			"size": {
+				"w": 1600,
+				"h": 640
+			},
+			"sprites": [
+				{
+					"filename": "Black 1.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 2.png",
+					"region": {
+						"x": 160,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 3.png",
+					"region": {
+						"x": 320,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 4.png",
+					"region": {
+						"x": 480,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 5.png",
+					"region": {
+						"x": 640,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 6.png",
+					"region": {
+						"x": 800,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 7.png",
+					"region": {
+						"x": 960,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 8.png",
+					"region": {
+						"x": 1120,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 9.png",
+					"region": {
+						"x": 1280,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 10.png",
+					"region": {
+						"x": 1440,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 11.png",
+					"region": {
+						"x": 0,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 12.png",
+					"region": {
+						"x": 160,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 13.png",
+					"region": {
+						"x": 320,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 14.png",
+					"region": {
+						"x": 480,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 15.png",
+					"region": {
+						"x": 640,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 16.png",
+					"region": {
+						"x": 800,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 17.png",
+					"region": {
+						"x": 960,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 18.png",
+					"region": {
+						"x": 1120,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 19.png",
+					"region": {
+						"x": 1280,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 20.png",
+					"region": {
+						"x": 1440,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 21.png",
+					"region": {
+						"x": 0,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 22.png",
+					"region": {
+						"x": 160,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 23.png",
+					"region": {
+						"x": 320,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 24.png",
+					"region": {
+						"x": 480,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 25.png",
+					"region": {
+						"x": 640,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 26.png",
+					"region": {
+						"x": 800,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 27.png",
+					"region": {
+						"x": 960,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 28.png",
+					"region": {
+						"x": 1120,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 29.png",
+					"region": {
+						"x": 1280,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 30.png",
+					"region": {
+						"x": 1440,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 31.png",
+					"region": {
+						"x": 0,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 32.png",
+					"region": {
+						"x": 160,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 33.png",
+					"region": {
+						"x": 320,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 34.png",
+					"region": {
+						"x": 480,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 35.png",
+					"region": {
+						"x": 640,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 36.png",
+					"region": {
+						"x": 800,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 37.png",
+					"region": {
+						"x": 960,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 38.png",
+					"region": {
+						"x": 1120,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 39.png",
+					"region": {
+						"x": 1280,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Black 40.png",
+					"region": {
+						"x": 1440,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9cbfb876d3033f1c243f40e8348efbc5:c056deb09b1baed2e538168fbee2ff7e:9e4b64f27b492b8ff4ba8b5238cc81fd$"
+	}
+}

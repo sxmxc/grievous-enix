@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChessSkill" load_steps=2 format=3 uid="uid://bc1xrfvd5y1lk"]
+
+[ext_resource type="Script" path="res://core/resources/chess_skill.gd" id="1_lx8mn"]
+
+[resource]
+script = ExtResource("1_lx8mn")
+skill_name = &"Swift Move I"
+skill_children = Array[ExtResource("1_lx8mn")]([])
+skill_description = "Base Move AND Capture +1
+"

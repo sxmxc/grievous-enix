@@ -1,0 +1,13 @@
+~ dev_testing
+
+Dev: [[Hi|Hello|Howdy]], this is some dialogue.
+Dev: Here are some choices.
+- First one
+	Dev: You picked the first one.
+- Second one
+	Dev: You picked the second one.
+- Start again => dev_testing
+- End the conversation => END
+Dev: Don't you feel so special.
+
+=> END

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://dw7yx3873yfpe"]
+
+[ext_resource type="Script" path="res://core/resources/chess_class.gd" id="1_4truo"]
+[ext_resource type="Resource" uid="uid://cimd8essteo52" path="res://data/chess_skills/bishop_training.tres" id="1_42qlf"]
+
+[resource]
+script = ExtResource("1_4truo")
+display_name = &"Bishop"
+description = ""
+base_value = 0
+base_skill = ExtResource("1_42qlf")

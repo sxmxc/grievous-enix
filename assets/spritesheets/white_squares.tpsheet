@@ -1,0 +1,573 @@
+{
+	"textures": [
+		{
+			"image": "white_squares.png",
+			"size": {
+				"w": 1600,
+				"h": 640
+			},
+			"sprites": [
+				{
+					"filename": "White 1.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 2.png",
+					"region": {
+						"x": 160,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 3.png",
+					"region": {
+						"x": 320,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 4.png",
+					"region": {
+						"x": 480,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 5.png",
+					"region": {
+						"x": 640,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 6.png",
+					"region": {
+						"x": 800,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 7.png",
+					"region": {
+						"x": 960,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 8.png",
+					"region": {
+						"x": 1120,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 9.png",
+					"region": {
+						"x": 1280,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 10.png",
+					"region": {
+						"x": 1440,
+						"y": 0,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 11.png",
+					"region": {
+						"x": 0,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 12.png",
+					"region": {
+						"x": 160,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 13.png",
+					"region": {
+						"x": 320,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 14.png",
+					"region": {
+						"x": 480,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 15.png",
+					"region": {
+						"x": 640,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 16.png",
+					"region": {
+						"x": 800,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 17.png",
+					"region": {
+						"x": 960,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 18.png",
+					"region": {
+						"x": 1120,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 19.png",
+					"region": {
+						"x": 1280,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 20.png",
+					"region": {
+						"x": 1440,
+						"y": 160,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 21.png",
+					"region": {
+						"x": 0,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 22.png",
+					"region": {
+						"x": 160,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 23.png",
+					"region": {
+						"x": 320,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 24.png",
+					"region": {
+						"x": 480,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 25.png",
+					"region": {
+						"x": 640,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 26.png",
+					"region": {
+						"x": 800,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 27.png",
+					"region": {
+						"x": 960,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 28.png",
+					"region": {
+						"x": 1120,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 29.png",
+					"region": {
+						"x": 1280,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 30.png",
+					"region": {
+						"x": 1440,
+						"y": 320,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 32.png",
+					"region": {
+						"x": 0,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 35.png",
+					"region": {
+						"x": 160,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 36.png",
+					"region": {
+						"x": 320,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 37.png",
+					"region": {
+						"x": 480,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 38.png",
+					"region": {
+						"x": 640,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 39.png",
+					"region": {
+						"x": 800,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "White 40.png",
+					"region": {
+						"x": 960,
+						"y": 480,
+						"w": 160,
+						"h": 160
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:4787c57b21cdab8ad14953af52f05159:44d25f7827e814a69a70023cf3622f1a:ce8c602431f8f19fad55d70c5e4205f3$"
+	}
+}

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChessSkill" load_steps=2 format=3 uid="uid://dwosoisxdwpxa"]
+
+[ext_resource type="Script" path="res://core/resources/chess_skill.gd" id="1_2e8ys"]
+
+[resource]
+script = ExtResource("1_2e8ys")
+skill_name = &"Pawn Training"
+skill_children = Array[StringName]([])
+skill_description = "Move 1 space forward OR Capture 1 space diagonally"
