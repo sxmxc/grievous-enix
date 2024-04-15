@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_lx8mn")
 skill_name = &"Swift Move I"
-skill_children = Array[ExtResource("1_lx8mn")]([])
+skill_children = Array[StringName]([])
 skill_description = "Base Move AND Capture +1
 "

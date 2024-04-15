@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://cg0fkw61fjot3"]
+
+[ext_resource type="Script" path="res://core/battle/chess_piece/chess_piece.gd" id="1_wvmg2"]
+[ext_resource type="Script" path="res://core/state_machine/state_machine.gd" id="2_qh4gd"]
+[ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/in_hand.gd" id="3_88vv2"]
+[ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/on_board.gd" id="3_kguev"]
+[ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/selected.gd" id="5_njyo8"]
+[ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/hovered.gd" id="5_v8sdm"]
+[ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/dragging.gd" id="6_s464f"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mpjnp"]
+size = Vector2(120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnodo"]
+size = Vector2(120, 120)
+
+[node name="ChessPiece" type="Node2D"]
+position = Vector2(302, 1502)
+script = ExtResource("1_wvmg2")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_qh4gd")
+initial_state = NodePath("OnBoard")
+
+[node name="InHand" type="Node" parent="StateMachine"]
+script = ExtResource("3_88vv2")
+
+[node name="OnBoard" type="Node" parent="StateMachine"]
+script = ExtResource("3_kguev")
+
+[node name="Hovered" type="Node" parent="StateMachine"]
+script = ExtResource("5_v8sdm")
+
+[node name="Selected" type="Node" parent="StateMachine"]
+script = ExtResource("5_njyo8")
+
+[node name="Dragging" type="Node" parent="StateMachine"]
+script = ExtResource("6_s464f")
+
+[node name="FocusIndicator" type="ColorRect" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(125, 125)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(32, 32)
+color = Color(0, 1, 0.0961113, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_mpjnp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xnodo")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

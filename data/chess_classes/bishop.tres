@@ -9,3 +9,4 @@ display_name = &"Bishop"
 description = ""
 base_value = 0
 base_skill = ExtResource("1_42qlf")
+piece_type = 3
