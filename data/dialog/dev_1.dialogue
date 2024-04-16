@@ -2,11 +2,22 @@
 
 Dev: [[Hi|Hello|Howdy]], this is some dialogue.
 Dev: Here are some choices.
-- First one
+- First one- Test State
 	Dev: You picked the first one.
-- Second one
+	Dev: Here is a value set in our state\: {{DataManager.dialogue_state.test_key}}
+	Dev: Now lets set a value. The value right now is\: {{DataManager.dialogue_state.test_int}}
+	set DataManager.dialogue_state.test_int += 1
+	Dev: The value is now\: {{DataManager.dialogue_state.test_int}}
+- Second one- Test Logic
 	Dev: You picked the second one.
+	Dev: Now let's test some logic. 
+	if DataManager.dialogue_state.test_int > 0
+		Dev: You ran through the first test. Good job. 
+		Dev: You should not see this if you did not run through first test.
+	else
+		Dev: You did not run through the first test. 
+		Dev: If you did, and you are seeing this, logic test is failing
 - Start again => dev_testing
 - End the conversation => END
 Dev: Don't you feel so special.
-=> END
+=> dev_testing

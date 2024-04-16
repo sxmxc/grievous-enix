@@ -17,6 +17,13 @@ var scene_database: Dictionary = {}
 var player_save_database: Dictionary = {}
 var player_data: Dictionary = {}
 
+var dialogue_state: Dictionary = {
+	"intro_played" : false,
+	"tutorial_played" : false,
+	"test_int" : 0,
+	"test_key": "blah"
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_load_data_from_disk()
@@ -46,6 +53,7 @@ func _save_data_to_disk():
 
 func save_game(save_name: String):
 	print("DataManager saving player data")
+	player_data["dialogue_state"] = dialogue_state
 	var player_file = "%s%s%s" % [PLAYER_SAVE_FOLDER, save_name, SAVE_FILE_EXTENSION]
 	var save = FileAccess.open(player_file, FileAccess.WRITE)
 	save.store_var(player_data)
