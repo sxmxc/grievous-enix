@@ -2,9 +2,11 @@ extends Node2D
 class_name ChessPiece
 
 @export var actor_data : ActorData
+@export var piece_color: Color
 
 @onready var sprite = $Sprite2D
 @onready var focus_indicator = $FocusIndicator
+
 
 var dragging = false
 # Called when the node enters the scene tree for the first time.

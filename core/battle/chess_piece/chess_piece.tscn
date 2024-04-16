@@ -15,7 +15,6 @@ size = Vector2(120, 120)
 size = Vector2(120, 120)
 
 [node name="ChessPiece" type="Node2D"]
-position = Vector2(302, 1502)
 script = ExtResource("1_wvmg2")
 
 [node name="StateMachine" type="Node" parent="."]
