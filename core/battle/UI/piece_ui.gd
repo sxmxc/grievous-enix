@@ -2,21 +2,27 @@ extends Control
 
 @onready var focus_indicator = $FocusIndicator
 @onready var color_indicator = $ColorIndicator as ColorRect
+@onready var member_image = $MemberImage as TextureRect
 var focused := false
 var actor_data : ActorData
 var pieace_color: Color
+var member_texture: Texture2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	color_indicator.color = pieace_color
 	focus_indicator.visible = focused
+	member_image.texture = actor_data.actor_profile_image
+	member_image.size.x = 60
+	member_image.size.y = 60
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func init_with(actor: ActorData):
+func init_with(actor: ActorData, color: Color):
 	actor_data = actor
+	set_color(color)
 
 func set_color(color: Color):
 	pieace_color = color

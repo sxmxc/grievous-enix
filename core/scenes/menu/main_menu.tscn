@@ -100,7 +100,6 @@ layout_mode = 2
 
 [node name="NewGameButton" type="Button" parent="MenuButtons/VBoxContainer"]
 layout_mode = 2
-disabled = true
 text = "New Game"
 
 [node name="ContinueButton" type="Button" parent="MenuButtons/VBoxContainer"]

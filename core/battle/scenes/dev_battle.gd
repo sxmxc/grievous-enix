@@ -33,4 +33,5 @@ func place_piece_on_board(actor_data: ActorData,  board_position: Vector2i, colo
 	
 
 func _on_piece_dropped_on_board(drop_data, board_position):
+	SoundManager.play_sound(DataManager.audio_database["drop"])
 	place_piece_on_board(drop_data.actor_data, board_position, drop_data.color)

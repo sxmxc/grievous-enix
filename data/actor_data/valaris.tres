@@ -2,16 +2,14 @@
 
 [ext_resource type="Resource" uid="uid://dw7yx3873yfpe" path="res://data/chess_classes/bishop.tres" id="1_jikl5"]
 [ext_resource type="Script" path="res://core/resources/actor_data.gd" id="1_wqlsv"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2uwjq"]
-size = Vector2(120, 120)
+[ext_resource type="Texture2D" uid="uid://dpkdad3ljo28n" path="res://assets/actor_profile_images/120x120.svg" id="2_pedrd"]
 
 [resource]
 script = ExtResource("1_wqlsv")
 actor_name = &"Valaris, The Frail"
 actor_chess_class = ExtResource("1_jikl5")
 actor_description = "An elder priest of the Old Faith, Valris turned his back on religion after the death of his wif at the hands of another priest."
-actor_profile_image = SubResource("PlaceholderTexture2D_2uwjq")
+actor_profile_image = ExtResource("2_pedrd")
 actor_special_skills = Array[Resource("res://core/resources/chess_skill.gd")]([])
 actor_level = 0
 actor_xp = 0

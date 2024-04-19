@@ -38,6 +38,7 @@ func _ready():
 	BattleEvents.piece_selected.connect(_on_piece_selected)
 	BattleEvents.piece_deselected.connect(_on_piece_deselected)
 	init_player_roster(temp_player_roster)
+	SoundManager.play_music(DataManager.audio_database["battle_song_1"],1)
 	pass # Replace with function body.
 
 
@@ -56,13 +57,14 @@ func _on_piece_deselected():
 	selected_piece = null
 
 func init_player_roster(roster: Array):
+	
 	print("Initializing player roster")
 	if player_roster_initialized:
 		print("Player roseter already intialized -> Skipping")
 	for member in roster:
 		var entry = piece_ui_scene.instantiate()
-		entry.set_color(member.piece_color)
-		entry.actor_data = member.actor_data
+		entry.init_with(member.actor_data, member.piece_color)
+		
 		%PlayerRoster.get_node("GridContainer").add_child(entry)
 	player_roster_initialized = true
 	print("Initializing player roster -> Done")

@@ -26,6 +26,17 @@ var dialogue_state: Dictionary = {
 	"test_key": "blah"
 }
 
+var audio_database: Dictionary = {
+	"menu_intro_song": preload("res://assets/audio/music/Enter the Abyss.mp3"),
+	"battle_song_1": preload("res://assets/audio/music/Pixel Nightmares.mp3"),
+	"back03": preload("res://addons/kenney_interface_sounds/back_003.wav"),
+	"click": preload("res://addons/kenney_interface_sounds/click_004.wav"),
+	"confirm": preload("res://addons/kenney_interface_sounds/confirmation_002.wav"),
+	"drop": preload("res://addons/kenney_interface_sounds/drop_003.wav")
+	
+	
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_load_data_from_disk()

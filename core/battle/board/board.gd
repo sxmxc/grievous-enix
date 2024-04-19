@@ -94,6 +94,9 @@ func generate_board():
 					cell_data.set_custom_data("is_trap", true)
 					cell_data.modulate = Color.RED
 			if y >= board_height - 2:
+				cell_data = get_cell_tile_data(0, cell)
+				if cell_data.get_custom_data("is_blocked"):
+					continue
 				var starting_position = preload("res://core/battle/UI/starting_position.tscn").instantiate()
 				starting_position.game_board = self
 				var tile_position = board_to_world(cell)

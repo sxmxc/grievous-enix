@@ -66,6 +66,7 @@ shape = SubResource("RectangleShape2D_xnodo")
 
 [node name="PieceMenu" type="Panel" parent="."]
 unique_name_in_owner = true
+z_index = 1
 offset_left = 62.0
 offset_top = -59.0
 offset_right = 212.0

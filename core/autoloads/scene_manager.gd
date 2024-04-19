@@ -99,6 +99,7 @@ func _on_content_invalid(path:String) -> void:
 	
 func _on_content_finished_loading(incoming_scene) -> void:
 	await _loading_screen.transition_in_complete
+	print("Transition in completed")
 	var outgoing_scene = _scene_to_unload	# NEW > can't use current_scene anymore
 	
 	# if our outgoing_scene has data to pass, give it to our incoming_scene
@@ -110,6 +111,7 @@ func _on_content_finished_loading(incoming_scene) -> void:
 		# listen for this if you want to perform tasks on the scene immeidately after adding it to the tree
 	# ex: moveing the HUD back up to the top of the stack
 	scene_added.emit(incoming_scene,_loading_screen)
+	
 	
 		# Remove the old scene
 	if _scene_to_unload != null:
