@@ -5,6 +5,7 @@ extends Control
 func _ready():
 	%Version.text = "v%s" % load("res://version.gd").VERSION
 	%Copyright.text = "©%s %s" % [load("res://copyright.gd").YEAR, load("res://copyright.gd").ENTITY]
+	$SettingsWindow.hide()
 	pass # Replace with function body.
 
 
@@ -20,4 +21,9 @@ func _on_dev_button_pressed():
 
 func _on_new_game_button_pressed():
 	SceneManager.swap_scenes("res://scenes/dialogue_scenes/intro.tscn",null, self)
+	pass # Replace with function body.
+
+
+func _on_settings_button_pressed():
+	$SettingsWindow.show()
 	pass # Replace with function body.

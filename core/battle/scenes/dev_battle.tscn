@@ -1,11 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://pys5dvb2pbwr"]
+[gd_scene load_steps=11 format=3 uid="uid://pys5dvb2pbwr"]
 
 [ext_resource type="Script" path="res://core/battle/scenes/dev_battle.gd" id="1_ggitd"]
 [ext_resource type="TileSet" uid="uid://c1fwu87t5u48w" path="res://assets/tilesets/marble-board.tres" id="1_gq3mm"]
 [ext_resource type="Script" path="res://core/battle/board/board.gd" id="2_xfa8u"]
 [ext_resource type="Script" path="res://core/battle/battle_camera.gd" id="3_60x1o"]
-[ext_resource type="Resource" uid="uid://cquvv6kgn37iy" path="res://data/actor_data/valaris.tres" id="3_ox02t"]
-[ext_resource type="PackedScene" uid="uid://cg0fkw61fjot3" path="res://core/battle/chess_piece/chess_piece.tscn" id="5_r66iy"]
 [ext_resource type="Script" path="res://core/battle/UI/left_panel.gd" id="7_03u1c"]
 [ext_resource type="Script" path="res://core/battle/UI/debug/square_info_debug.gd" id="8_fhe4y"]
 
@@ -53,11 +51,10 @@ position = Vector2(464, 806)
 enabled = false
 zoom = Vector2(0.3, 0.3)
 script = ExtResource("3_60x1o")
+focus_zoom_factor = 0.5
 
 [node name="PlayerPieces" type="Node2D" parent="."]
-
-[node name="ChessPiece" parent="PlayerPieces" instance=ExtResource("5_r66iy")]
-actor_data = ExtResource("3_ox02t")
+unique_name_in_owner = true
 
 [node name="EnemyPieces" type="Node2D" parent="."]
 

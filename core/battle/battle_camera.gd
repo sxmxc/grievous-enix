@@ -1,16 +1,20 @@
 extends Camera2D
 
 @export var min_zoom := 0.1
-@export var max_zoom := 5.0
+@export var max_zoom := 2
 @export var zoom_factor := 0.1
 @export var zoom_duration := 0.2
+@export var focus_zoom_factor := .7
 var zoom_level: float = .3
+var prev_zoom_level: float = .3
+var prev_position
 var position_before_drag
 var position_before_drag2
 
 
 func _ready():
-	#GlobalEvents.center_camera.connect(center_on_tables)
+	BattleEvents.piece_selected.connect(_on_piece_selected)
+	BattleEvents.piece_deselected.connect(_on_piece_deselected)
 	pass
 
 func _unhandled_input(event):
@@ -37,39 +41,28 @@ func _unhandled_input(event):
 		self.global_position = position_before_drag2 + (position_before_drag - event.global_position) * (1/zoom_level)
 
 
-func set_zoom_level(level: float, mouse_world_position = self.get_global_mouse_position()):
+func set_zoom_level(level: float, new_position = self.get_global_mouse_position()):
 	var old_zoom_level = zoom_level
 	
 	zoom_level = clampf(level, min_zoom, max_zoom)
 	
-	var direction = (mouse_world_position - self.global_position)
-	var new_position = self.global_position + direction - ((direction) / (zoom_level/old_zoom_level))
+
+	var zoom_tween = get_tree().create_tween()
+	zoom_tween.tween_property(self,"zoom",Vector2(zoom_level, zoom_level), .5)
 	
-	self.zoom = Vector2(zoom_level, zoom_level)
-	self.global_position = new_position
+	if zoom_level == max_zoom || zoom_level == min_zoom:
+		return
+	
+	var pos_tween = get_tree().create_tween()
+	pos_tween.tween_property(self, "global_position", new_position, .5)
 
 
-func center_on_tables():
-	var tables: Array[Node] = get_tree().get_nodes_in_group("tables")
-	
-	var max_x = tables[0].global_position.x + tables[0].size.x
-	var min_x = tables[0].global_position.x
-	var max_y = tables[0].global_position.y + tables[0].size.y
-	var min_y = tables[0].global_position.y
-	
-	for table in tables:
-		max_x = max(max_x, table.global_position.x + table.size.x)
-		min_x = min(min_x, table.global_position.x)
-		max_y = max(max_y, table.global_position.y + table.size.y)
-		min_y = min(min_y, table.global_position.y)
-	
-	var center = Vector2((max_x - min_x) / 2 + min_x, (max_y - min_y) / 2 + min_y)
-	global_position = center
-	
-	# Find out the zoom
-	var screen_width = get_viewport().get_visible_rect().size.x
-	var project_width = max_x - min_x + 300
-	
-	if project_width > screen_width:
-		var new_zoom_level = screen_width/project_width
-		set_zoom_level(new_zoom_level, global_position)
+func _on_piece_selected(piece: ChessPiece):
+	prev_zoom_level = zoom_level
+	var board = %Board as ChessBoard
+	set_zoom_level(focus_zoom_factor, board.board_to_world(board.world_to_board(piece.global_position)))
+	pass
+
+func _on_piece_deselected():
+	set_zoom_level(prev_zoom_level)
+	pass

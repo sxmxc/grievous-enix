@@ -13,15 +13,16 @@ config_version=5
 config/name="grievous-enix"
 config/version="0.0.1"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://assets/pxvoidmoose.png"
+config/icon="res://assets/pixLogo.png"
 
 [autoload]
 
 GameEvents="*res://core/autoloads/game_events.gd"
 BattleEvents="*res://core/autoloads/battle_events.gd"
 DataManager="*res://core/autoloads/data_manager.gd"
-AudioManager="*res://core/autoloads/audio_manager.gd"
 SceneManager="*res://core/autoloads/scene_manager.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 BattleManager="*res://core/autoloads/battle_manager.gd"
 Panku="*res://addons/panku_console/console.tscn"
@@ -32,7 +33,11 @@ general/balloon_path="res://scenes/dialogue_scenes/balloons/balloon.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AutoExportVersion/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/panku_console/plugin.cfg")
+enabled=PackedStringArray("res://addons/AutoExportVersion/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/panku_console/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+
+[global_group]
+
+starting_positions=""
 
 [input]
 

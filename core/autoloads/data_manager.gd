@@ -17,6 +17,8 @@ var scene_database: Dictionary = {}
 var player_save_database: Dictionary = {}
 var player_data: Dictionary = {}
 
+var user_prefs: UserPrefs
+
 var dialogue_state: Dictionary = {
 	"intro_played" : false,
 	"tutorial_played" : false,
@@ -39,6 +41,7 @@ func _load_data_from_disk():
 	var loaded_file = FileAccess.open(save_db_file, FileAccess.READ)
 	player_save_database = loaded_file.get_var()
 	loaded_file.close()
+	user_prefs = UserPrefs.load_or_create()
 	print("DataManager loading data from disk -> Done")
 	pass
 
@@ -49,6 +52,12 @@ func _save_data_to_disk():
 	save.store_var(player_save_database)
 	save.close()
 	print("DataManager saving meta data -> Done")
+	pass
+
+func save_settings():
+	print("DataManager saving game settings")
+	user_prefs.save()
+	print("DataManager saving game settings -> Done")
 	pass
 
 func save_game(save_name: String):

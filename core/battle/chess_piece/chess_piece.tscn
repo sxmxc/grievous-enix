@@ -1,28 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://cg0fkw61fjot3"]
+[gd_scene load_steps=11 format=3 uid="uid://cg0fkw61fjot3"]
 
 [ext_resource type="Script" path="res://core/battle/chess_piece/chess_piece.gd" id="1_wvmg2"]
+[ext_resource type="Resource" uid="uid://o27qc4yc2xpu" path="res://data/actor_data/voidmoose.tres" id="2_gja7n"]
 [ext_resource type="Script" path="res://core/state_machine/state_machine.gd" id="2_qh4gd"]
-[ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/in_hand.gd" id="3_88vv2"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/on_board.gd" id="3_kguev"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/selected.gd" id="5_njyo8"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/hovered.gd" id="5_v8sdm"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/dragging.gd" id="6_s464f"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mpjnp"]
-size = Vector2(120, 120)
+[sub_resource type="Gradient" id="Gradient_wmqba"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o431q"]
+gradient = SubResource("Gradient_wmqba")
+width = 120
+height = 120
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnodo"]
 size = Vector2(120, 120)
 
 [node name="ChessPiece" type="Node2D"]
 script = ExtResource("1_wvmg2")
+actor_data = ExtResource("2_gja7n")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_qh4gd")
 initial_state = NodePath("OnBoard")
-
-[node name="InHand" type="Node" parent="StateMachine"]
-script = ExtResource("3_88vv2")
 
 [node name="OnBoard" type="Node" parent="StateMachine"]
 script = ExtResource("3_kguev")
@@ -54,12 +57,48 @@ pivot_offset = Vector2(32, 32)
 color = Color(0, 1, 0.0961113, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_mpjnp")
+texture = SubResource("GradientTexture2D_o431q")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_xnodo")
+
+[node name="PieceMenu" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 62.0
+offset_top = -59.0
+offset_right = 212.0
+offset_bottom = 61.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PieceMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PieceMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PieceMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Move"
+
+[node name="Button2" type="Button" parent="PieceMenu/MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Special"
+
+[node name="Button3" type="Button" parent="PieceMenu/MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Cancel"
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

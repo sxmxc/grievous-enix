@@ -93,6 +93,14 @@ func generate_board():
 				if rand_val < trap_chance:
 					cell_data.set_custom_data("is_trap", true)
 					cell_data.modulate = Color.RED
+			if y >= board_height - 2:
+				var starting_position = preload("res://core/battle/UI/starting_position.tscn").instantiate()
+				starting_position.game_board = self
+				var tile_position = board_to_world(cell)
+				#starting_position.global_position = Vector2i(tile_position.x + tile_set.tile_size.x/2, tile_position.y - tile_set.tile_size.y/2)
+				#starting_position.global_position = tile_position
+				add_child(starting_position)
+				center_reference_rect_on_tile(cell.x,cell.y,starting_position)
 	generation_complete.emit()
 	#await get_tree().create_timer(3).timeout
 	##redraw()
@@ -127,3 +135,19 @@ func is_square_trap(square: Vector2i):
 		return true
 	if !data.get_custom_data("is_trap"):
 		return false
+
+
+func center_reference_rect_on_tile(tile_x, tile_y, reference_rect: ReferenceRect):
+	# Get the size of the tiles (assuming square tiles for simplicity)
+	var tile_size = tile_set.tile_size.x  # or .y if height could be different
+
+	# Calculate the center of the tile in pixel coordinates
+	var pixel_x = tile_x * tile_size + tile_size / 2
+	var pixel_y = tile_y * tile_size + tile_size / 2
+
+	# Adjust for the ReferenceRect's size to center it
+	pixel_x -= reference_rect.size.x / 2
+	pixel_y -= reference_rect.size.y / 2
+
+	# Set the position of the ReferenceRect
+	reference_rect.position = Vector2(pixel_x, pixel_y)

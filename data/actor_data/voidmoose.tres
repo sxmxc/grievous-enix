@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ActorData" load_steps=4 format=3 uid="uid://o27qc4yc2xpu"]
+
+[ext_resource type="Resource" uid="uid://5g1muiff72i4" path="res://data/chess_classes/pawn.tres" id="1_28h5x"]
+[ext_resource type="Script" path="res://core/resources/actor_data.gd" id="1_de1sp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_24765"]
+size = Vector2(120, 120)
+
+[resource]
+script = ExtResource("1_de1sp")
+actor_name = &"Voidmoose"
+actor_chess_class = ExtResource("1_28h5x")
+actor_description = "Some say once a decade, he will emerge from his cave and greet the world. "
+actor_profile_image = SubResource("PlaceholderTexture2D_24765")
+actor_special_skills = Array[Resource("res://core/resources/chess_skill.gd")]([])
+actor_level = 0
+actor_xp = 0
+actor_xp_to_next_level = 0
+actor_sp = 0
+actor_sp_used = 0

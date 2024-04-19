@@ -1,8 +1,8 @@
 extends State
 
 func handle_input(event: InputEvent):
-	if event.is_action_pressed("left_click"):
-		state_machine.transition_to("Selected")
+	#if event.is_action_pressed("left_click"):
+		#state_machine.transition_to("Selected")
 	pass
 
 func on_mouse_entered():

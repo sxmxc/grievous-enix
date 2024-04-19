@@ -17,15 +17,18 @@ var selected_piece : ChessPiece = null
 var temp_player_roster : Array = [
 	{
 		"actor": "Valaris",
-		"piece_color" : Color.DARK_CYAN
+		"piece_color" : Color.DARK_CYAN,
+		"actor_data" : preload("res://data/actor_data/valaris.tres")
 	},
 	{
 		"actor": "SomeoneElse",
-		"piece_color" : Color.DARK_GREEN
+		"piece_color" : Color.DARK_GREEN,
+		"actor_data" : preload("res://data/actor_data/voidmoose.tres")
 	},
 	{
 		"actor": "AndAnother",
-		"piece_color" : Color.DARK_ORANGE
+		"piece_color" : Color.DARK_ORANGE,
+		"actor_data" : preload("res://data/actor_data/voidmoose.tres")
 	},
 ]
 
@@ -59,6 +62,7 @@ func init_player_roster(roster: Array):
 	for member in roster:
 		var entry = piece_ui_scene.instantiate()
 		entry.set_color(member.piece_color)
+		entry.actor_data = member.actor_data
 		%PlayerRoster.get_node("GridContainer").add_child(entry)
 	player_roster_initialized = true
 	print("Initializing player roster -> Done")

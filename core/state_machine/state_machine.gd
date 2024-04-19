@@ -30,15 +30,17 @@ func _physics_process(delta):
 func transition_to(target_state_name: String, msg: Dictionary = {}):
 	if not has_node(target_state_name):
 		return
-	
 	state.exit()
 	state = get_node(target_state_name)
 	current_state_name = state.name
 	state.enter(msg)
 	transitioned.emit(state.name)
 
-func _on_mouse_entered():
+func _on_area_2d_mouse_entered():
 	state.on_mouse_entered()
 
-func _on_mouse_exited():
+func _on_area_2d_mouse_exited():
 	state.on_mouse_exited()
+
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	pass

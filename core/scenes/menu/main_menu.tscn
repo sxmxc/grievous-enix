@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgergdhbl74hs"]
+[gd_scene load_steps=4 format=3 uid="uid://bgergdhbl74hs"]
 
 [ext_resource type="Script" path="res://core/scenes/menu/main_menu.gd" id="1_byntf"]
+[ext_resource type="Script" path="res://core/scenes/menu/settings_window.gd" id="2_34oep"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukv7l"]
+bg_color = Color(0.0823529, 0.0823529, 0.0823529, 0.921569)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -73,7 +77,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MenuButtons" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -91,36 +95,293 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuButtons"]
 layout_mode = 2
 
-[node name="NewGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="MenuButtons/VBoxContainer"]
 layout_mode = 2
 disabled = true
 text = "New Game"
 
-[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="MenuButtons/VBoxContainer"]
 auto_translate_mode = 1
 layout_mode = 2
 disabled = true
 text = "Continue"
 
-[node name="LoadGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="LoadGameButton" type="Button" parent="MenuButtons/VBoxContainer"]
 auto_translate_mode = 1
 layout_mode = 2
 disabled = true
 text = "Load Game"
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="MenuButtons/VBoxContainer"]
 auto_translate_mode = 1
 layout_mode = 2
-disabled = true
 text = "Settings"
 
-[node name="DevButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="DevButton" type="Button" parent="MenuButtons/VBoxContainer"]
 auto_translate_mode = 1
 layout_mode = 2
 text = "Dev"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/DevButton" to="." method="_on_dev_button_pressed"]
+[node name="SettingsWindow" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -263.0
+offset_right = 233.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_34oep")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsWindow"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="SettingsWindow/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ukv7l")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsWindow/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="AudioSection" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SectionTitle" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/SectionTitle"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/SectionTitle"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Audio"
+
+[node name="HSeparator2" type="HSeparator" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/SectionTitle"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master Volume"
+
+[node name="MasterSlider" type="HSlider" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+ticks_on_borders = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection"]
+auto_translate_mode = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/HBoxContainer2"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/HBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+ticks_on_borders = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection"]
+auto_translate_mode = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/HBoxContainer3"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX Volume"
+
+[node name="SfxSlider" type="HSlider" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/AudioSection/HBoxContainer3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+ticks_on_borders = true
+
+[node name="GamePlaySection" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SectionHeading" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection/SectionHeading"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection/SectionHeading"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Gameplay"
+
+[node name="HSeparator4" type="HSeparator" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection/SectionHeading"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection"]
+auto_translate_mode = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection/HBoxContainer4"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Difficulty"
+
+[node name="DifficultyDropdown" type="OptionButton" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/GamePlaySection/HBoxContainer4"]
+layout_mode = 2
+selected = 1
+item_count = 4
+popup/item_0/text = "Easy"
+popup/item_0/id = 0
+popup/item_1/text = "Normal"
+popup/item_1/id = 1
+popup/item_2/text = "Hard"
+popup/item_2/id = 2
+popup/item_3/text = "Very Hard"
+popup/item_3/id = 3
+
+[node name="DisplaySection" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="SectionHeading" type="VBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/SectionHeading"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/SectionHeading"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Display"
+
+[node name="HSeparator4" type="HSeparator" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/SectionHeading"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection"]
+auto_translate_mode = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/HBoxContainer5"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Resolution"
+
+[node name="ResolutionDropdown" type="OptionButton" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/HBoxContainer5"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 1
+item_count = 4
+popup/item_0/text = "Blah"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
+popup/item_2/text = "Blah blah"
+popup/item_2/id = 2
+popup/item_3/text = "More Blah"
+popup/item_3/id = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection"]
+auto_translate_mode = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/HBoxContainer6"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Graphics Quality"
+
+[node name="QualityDropdown" type="OptionButton" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/DisplaySection/HBoxContainer6"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 3
+item_count = 4
+popup/item_0/text = "Low"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "High"
+popup/item_2/id = 2
+popup/item_3/text = "Ultra"
+popup/item_3/id = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Cancel"
+
+[node name="SaveButton" type="Button" parent="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Save"
+
+[connection signal="pressed" from="MenuButtons/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MenuButtons/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MenuButtons/VBoxContainer/DevButton" to="." method="_on_dev_button_pressed"]
+[connection signal="pressed" from="SettingsWindow/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="SettingsWindow" method="_on_cancel_button_pressed"]

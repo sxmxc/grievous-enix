@@ -2,6 +2,8 @@ extends Node2D
 class_name BattleScene
 
 signal scene_ready
+
+@export var chess_piece_scene = preload("res://core/battle/chess_piece/chess_piece.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
