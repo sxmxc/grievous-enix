@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="ChessSkill" load_steps=2 format=3 uid="uid://cimd8essteo52"]
+[gd_resource type="Resource" script_class="MoveSkill" load_steps=2 format=3 uid="uid://b07s7oasxnd5n"]
 
-[ext_resource type="Script" path="res://core/resources/chess_skill.gd" id="1_o3kkw"]
+[ext_resource type="Script" path="res://core/resources/move_skill.gd" id="1_fm5a7"]
 
 [resource]
-script = ExtResource("1_o3kkw")
-skill_name = &""
+script = ExtResource("1_fm5a7")
+captures = Array[Vector2i]([])
+move_range_x = 0
+move_range_y = 0
+move_range_diag = 10
+only_forward = false
+skill_name = &"Bishop Training"
 skill_children = Array[StringName]([])
 skill_description = ""

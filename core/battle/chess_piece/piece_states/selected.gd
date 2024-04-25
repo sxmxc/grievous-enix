@@ -17,6 +17,7 @@ func physics_update(_delta):
 func enter(_msg = {}):
 	actor.focus_indicator.show()
 	actor.piece_menu.show()
+	SoundManager.play_sound(DataManager.audio_database.find("click"))
 	BattleEvents.piece_selected.emit(actor)
 	pass
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgergdhbl74hs"]
 
-[ext_resource type="Script" path="res://core/scenes/menu/main_menu.gd" id="1_byntf"]
-[ext_resource type="Script" path="res://core/scenes/menu/settings_window.gd" id="2_34oep"]
+[ext_resource type="Script" path="res://core/scenes/menu/main_menu/main_menu.gd" id="1_byntf"]
+[ext_resource type="Script" path="res://core/scenes/menu/main_menu/settings_window.gd" id="2_34oep"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukv7l"]
 bg_color = Color(0.0823529, 0.0823529, 0.0823529, 0.921569)

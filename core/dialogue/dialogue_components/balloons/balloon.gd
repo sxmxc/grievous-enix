@@ -7,6 +7,7 @@ extends CanvasLayer
 @export var skip_action: StringName = &"ui_cancel"
 
 @onready var balloon: Control = %Balloon
+@onready var character_profile = %CharacterProfile
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
@@ -43,7 +44,13 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
-
+		
+		character_profile.visible = not dialogue_line.character.is_empty()
+		if DataManager.actor_database.exists(dialogue_line.character):
+			character_profile.texture = DataManager.actor_database.find(dialogue_line.character).actor_profile_image
+		else:
+			character_profile.visible = false
+			
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
 

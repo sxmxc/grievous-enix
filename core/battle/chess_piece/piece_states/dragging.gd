@@ -9,10 +9,13 @@ func handle_input(event: InputEvent):
 		if is_valid_drop(board_square):
 			var tween = get_tree().create_tween()
 			tween.tween_property(actor, "global_position" ,BattleManager.current_board.board_to_world(board_square),.2)
+			SoundManager.play_sound(DataManager.audio_database.find("drop"))
 			state_machine.transition_to("OnBoard")
+			BattleEvents.piece_moved.emit()
 		else:
 			var tween = get_tree().create_tween()
 			tween.tween_property(actor, "global_position" ,BattleManager.current_board.board_to_world(starting_square),.2)
+			SoundManager.play_sound(DataManager.audio_database.find("error"))
 			state_machine.transition_to("OnBoard")
 	pass
 
@@ -54,6 +57,8 @@ func exit():
 	pass
 
 func is_valid_drop(square: Vector2i):
+	if !square in actor.actor_data.get_moves(starting_square):
+		return false
 	var blocked = BattleManager.current_board.is_square_blocked(square)
 	match blocked:
 		true, null:

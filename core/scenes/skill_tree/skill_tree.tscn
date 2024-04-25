@@ -1,0 +1,3470 @@
+[gd_scene load_steps=7 format=3 uid="uid://dep1p67rogy7c"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s2l86"]
+load_path = "res://.godot/imported/hexagon.svg-80ba277abbdea7be7e936847c2d722bd.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhspw"]
+texture = SubResource("CompressedTexture2D_s2l86")
+modulate_color = Color(0.531967, 0.739268, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wn5on"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_bomjw"]
+font_size = 50
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_obqo4"]
+load_path = "res://.godot/imported/hexagon.svg-80ba277abbdea7be7e936847c2d722bd.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjimx"]
+texture = SubResource("CompressedTexture2D_obqo4")
+modulate_color = Color(0.823529, 0.647059, 0.54902, 1)
+
+[node name="SkillTree" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 1006.0
+offset_top = 80.0
+offset_right = 1291.0
+offset_bottom = 336.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "King"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 781.0
+offset_top = 80.0
+offset_right = 1066.0
+offset_bottom = 336.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel2"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Pawn"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel2"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel2"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel2"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 668.0
+offset_top = 147.0
+offset_right = 953.0
+offset_bottom = 403.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel3"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Queen"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel3"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel3"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel3"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 671.0
+offset_top = 410.0
+offset_right = 956.0
+offset_bottom = 666.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel4"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Knight"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel4"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel4"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel4"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 890.0
+offset_top = 414.0
+offset_right = 1175.0
+offset_bottom = 670.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel5"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Rook"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel5"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel5"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel5"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 116.0
+offset_top = 473.0
+offset_right = 401.0
+offset_bottom = 729.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel6"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "White Bishop"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel6"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel6"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel6"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel7" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 117.0
+offset_top = 203.0
+offset_right = 402.0
+offset_bottom = 459.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel7"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Black Bishop"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel7"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel7"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel7"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel36" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 117.0
+offset_top = 203.0
+offset_right = 402.0
+offset_bottom = 459.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhspw")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel36"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Black Bishop"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel36"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel36"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel36"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel8" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 891.0
+offset_top = 14.0
+offset_right = 1176.0
+offset_bottom = 270.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel8"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel8"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel8"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel8"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel9" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 892.0
+offset_top = 147.0
+offset_right = 1177.0
+offset_bottom = 403.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel9"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel9"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel9"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel9"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel10" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 892.0
+offset_top = 281.0
+offset_right = 1177.0
+offset_bottom = 537.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel10"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel10"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel10"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel10"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel11" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 1003.0
+offset_top = 217.0
+offset_right = 1288.0
+offset_bottom = 473.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel11"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel11"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel11"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel11"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel12" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 1001.0
+offset_top = 351.0
+offset_right = 1286.0
+offset_bottom = 607.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel12"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel12"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel12"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel12"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel13" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 483.0
+offset_right = 1285.0
+offset_bottom = 739.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel13"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel13"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel13"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel13"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel14" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 214.0
+offset_right = 1065.0
+offset_bottom = 470.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel14"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel14"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel14"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel14"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel15" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 781.0
+offset_top = 345.0
+offset_right = 1066.0
+offset_bottom = 601.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel15"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel15"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel15"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel15"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel17" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 671.0
+offset_top = 279.0
+offset_right = 956.0
+offset_bottom = 535.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel17"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel17"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel17"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel17"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel19" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 560.0
+offset_top = 78.0
+offset_right = 845.0
+offset_bottom = 334.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel19"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel19"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel19"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel19"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel20" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 558.0
+offset_top = 215.0
+offset_right = 843.0
+offset_bottom = 471.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel20"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel20"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel20"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel20"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel21" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 560.0
+offset_top = 344.0
+offset_right = 845.0
+offset_bottom = 600.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel21"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel21"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel21"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel21"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel22" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 562.0
+offset_top = 477.0
+offset_right = 847.0
+offset_bottom = 733.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel22"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel22"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel22"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel22"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel23" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 449.0
+offset_top = 144.0
+offset_right = 734.0
+offset_bottom = 400.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel23"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel23"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel23"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel23"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel24" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 447.0
+offset_top = 280.0
+offset_right = 732.0
+offset_bottom = 536.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel24"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel24"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel24"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel24"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel25" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 410.0
+offset_right = 733.0
+offset_bottom = 666.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel25"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel25"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel25"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel25"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel26" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 336.0
+offset_top = 343.0
+offset_right = 621.0
+offset_bottom = 599.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel26"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel26"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel26"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel26"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel28" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 116.0
+offset_top = 340.0
+offset_right = 401.0
+offset_bottom = 596.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel28"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel28"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel28"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel28"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel37" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 118.0
+offset_top = 72.0
+offset_right = 403.0
+offset_bottom = 328.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel37"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel37"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel37"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel37"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel38" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 291.0
+offset_bottom = 266.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel38"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel38"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel38"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel38"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel39" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 135.0
+offset_right = 292.0
+offset_bottom = 391.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel39"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel39"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel39"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel39"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel40" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 271.0
+offset_right = 288.0
+offset_bottom = 527.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel40"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel40"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel40"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel40"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel41" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 405.0
+offset_right = 289.0
+offset_bottom = 661.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel41"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel41"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel41"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel41"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel29" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 338.0
+offset_top = 207.0
+offset_right = 623.0
+offset_bottom = 463.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel29"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel29"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel29"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel29"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel30" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 340.0
+offset_top = 74.0
+offset_right = 625.0
+offset_bottom = 330.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel30"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel30"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel30"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel30"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel31" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 451.0
+offset_top = 10.0
+offset_right = 736.0
+offset_bottom = 266.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel31"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel31"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel31"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel31"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel32" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 230.0
+offset_top = 9.0
+offset_right = 515.0
+offset_bottom = 265.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel32"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel32"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel32"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel32"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel33" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 230.0
+offset_top = 139.0
+offset_right = 515.0
+offset_bottom = 395.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel33"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel33"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel33"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel33"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel34" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 227.0
+offset_top = 274.0
+offset_right = 512.0
+offset_bottom = 530.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel34"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel34"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel34"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel34"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel35" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 226.0
+offset_top = 408.0
+offset_right = 511.0
+offset_bottom = 664.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel35"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel35"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel35"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel35"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel27" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 338.0
+offset_top = 476.0
+offset_right = 623.0
+offset_bottom = 732.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel27"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel27"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel27"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel27"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel18" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 670.0
+offset_top = 14.0
+offset_right = 955.0
+offset_bottom = 270.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel18"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel18"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel18"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel18"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel16" type="Panel" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(285, 256)
+layout_mode = 0
+offset_left = 779.0
+offset_top = 478.0
+offset_right = 1064.0
+offset_bottom = 734.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjimx")
+metadata/_edit_group_ = true
+
+[node name="SkillName" type="Label" parent="Panel16"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.5
+offset_top = 9.0
+offset_right = 76.5
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Swift Move I"
+label_settings = SubResource("LabelSettings_wn5on")
+horizontal_alignment = 1
+
+[node name="SkillFlavorText" type="RichTextLabel" parent="Panel16"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -210.0
+offset_right = 75.5
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]Basic Pawn training[/i][/center]"
+fit_content = true
+
+[node name="SkillDescription" type="RichTextLabel" parent="Panel16"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -34.5
+offset_right = 76.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Move [b]1[/b] space forward or capture [b]1[/b] space diagonally[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="Panel16"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -81.0
+offset_right = 20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_bomjw")
+horizontal_alignment = 1
+vertical_alignment = 1

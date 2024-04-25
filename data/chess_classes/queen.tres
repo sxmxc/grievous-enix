@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://dku167xt7mpnj"]
+
+[ext_resource type="Resource" uid="uid://bqqgfwjjkknau" path="res://data/chess_skills/queen_training.tres" id="1_bs73m"]
+[ext_resource type="Script" path="res://core/resources/chess_class.gd" id="1_yvy8o"]
+
+[resource]
+script = ExtResource("1_yvy8o")
+display_name = &"Queen"
+base_value = 0
+base_movement_skill = ExtResource("1_bs73m")
+piece_type = 4

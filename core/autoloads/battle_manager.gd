@@ -1,7 +1,9 @@
 extends Node
 
-var current_board: ChessBoard = null
-var square_indicator = null
+@export var current_board: ChessBoard = null
+@export var square_indicator = null
+
+@export var battle_paused := false
 
 func register_board(board: ChessBoard, indicator):
 	current_board = board

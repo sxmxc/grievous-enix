@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg0fkw61fjot3"]
+[gd_scene load_steps=12 format=3 uid="uid://cg0fkw61fjot3"]
 
 [ext_resource type="Script" path="res://core/battle/chess_piece/chess_piece.gd" id="1_wvmg2"]
 [ext_resource type="Resource" uid="uid://o27qc4yc2xpu" path="res://data/actor_data/voidmoose.tres" id="2_gja7n"]
-[ext_resource type="Script" path="res://core/state_machine/state_machine.gd" id="2_qh4gd"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/on_board.gd" id="3_kguev"]
+[ext_resource type="Script" path="res://core/state_machine/piece_state_machine.gd" id="3_si8jb"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/selected.gd" id="5_njyo8"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/hovered.gd" id="5_v8sdm"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/dragging.gd" id="6_s464f"]
+[ext_resource type="Script" path="res://core/battle/chess_piece/piece_menu.gd" id="8_7s5km"]
 
 [sub_resource type="Gradient" id="Gradient_wmqba"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -23,20 +24,20 @@ size = Vector2(120, 120)
 script = ExtResource("1_wvmg2")
 actor_data = ExtResource("2_gja7n")
 
-[node name="StateMachine" type="Node" parent="."]
-script = ExtResource("2_qh4gd")
+[node name="PieceStateMachine" type="Node" parent="."]
+script = ExtResource("3_si8jb")
 initial_state = NodePath("OnBoard")
 
-[node name="OnBoard" type="Node" parent="StateMachine"]
+[node name="OnBoard" type="Node" parent="PieceStateMachine"]
 script = ExtResource("3_kguev")
 
-[node name="Hovered" type="Node" parent="StateMachine"]
+[node name="Hovered" type="Node" parent="PieceStateMachine"]
 script = ExtResource("5_v8sdm")
 
-[node name="Selected" type="Node" parent="StateMachine"]
+[node name="Selected" type="Node" parent="PieceStateMachine"]
 script = ExtResource("5_njyo8")
 
-[node name="Dragging" type="Node" parent="StateMachine"]
+[node name="Dragging" type="Node" parent="PieceStateMachine"]
 script = ExtResource("6_s464f")
 
 [node name="FocusIndicator" type="ColorRect" parent="."]
@@ -71,6 +72,7 @@ offset_left = 62.0
 offset_top = -59.0
 offset_right = 212.0
 offset_bottom = 61.0
+script = ExtResource("8_7s5km")
 
 [node name="MarginContainer" type="MarginContainer" parent="PieceMenu"]
 layout_mode = 1
@@ -84,23 +86,33 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PieceMenu/MarginContainer"]
+[node name="Main" type="VBoxContainer" parent="PieceMenu/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Button" type="Button" parent="PieceMenu/MarginContainer/VBoxContainer"]
+[node name="MoveButton" type="Button" parent="PieceMenu/MarginContainer/Main"]
 layout_mode = 2
 text = "Move"
 
-[node name="Button2" type="Button" parent="PieceMenu/MarginContainer/VBoxContainer"]
+[node name="AbilityButton" type="Button" parent="PieceMenu/MarginContainer/Main"]
 auto_translate_mode = 1
 layout_mode = 2
-text = "Special"
+text = "Ability"
 
-[node name="Button3" type="Button" parent="PieceMenu/MarginContainer/VBoxContainer"]
+[node name="CancelButton" type="Button" parent="PieceMenu/MarginContainer/Main"]
 auto_translate_mode = 1
 layout_mode = 2
 text = "Cancel"
 
+[node name="Abilities" type="VBoxContainer" parent="PieceMenu/MarginContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="PieceMenu/MarginContainer/Main/MoveButton" to="." method="_on_move_button_pressed"]
+[connection signal="pressed" from="PieceMenu/MarginContainer/Main/AbilityButton" to="." method="_on_ability_button_pressed"]
+[connection signal="pressed" from="PieceMenu/MarginContainer/Main/CancelButton" to="." method="_on_cancel_button_pressed"]

@@ -1,0 +1,2 @@
+extends ChessSkill
+class_name PassiveSkill

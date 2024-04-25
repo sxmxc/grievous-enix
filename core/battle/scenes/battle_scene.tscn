@@ -1,24 +1,604 @@
-[gd_scene load_steps=4 format=3 uid="uid://1gtht18nrn6g"]
+[gd_scene load_steps=16 format=3 uid="uid://1gtht18nrn6g"]
 
 [ext_resource type="Script" path="res://core/battle/board/board.gd" id="1_2r0vp"]
 [ext_resource type="Script" path="res://core/battle/scenes/battle_scene.gd" id="1_3u3cb"]
+[ext_resource type="Script" path="res://core/state_machine/battle_state_machine.gd" id="2_i1k06"]
 [ext_resource type="Script" path="res://core/battle/battle_camera.gd" id="2_mkg0k"]
+[ext_resource type="Script" path="res://core/battle/battle_states/pre_battle.gd" id="3_64oey"]
+[ext_resource type="Script" path="res://core/battle/battle_states/player_turn.gd" id="4_2d5dq"]
+[ext_resource type="Script" path="res://core/battle/battle_states/enemy_turn.gd" id="5_g075w"]
+[ext_resource type="Script" path="res://core/battle/battle_states/post_battle.gd" id="6_ybnlg"]
+[ext_resource type="TileSet" uid="uid://c1fwu87t5u48w" path="res://assets/tilesets/marble-board.tres" id="7_ogoa1"]
+[ext_resource type="Script" path="res://core/battle/UI/left_panel.gd" id="9_aq41o"]
+[ext_resource type="Script" path="res://core/battle/UI/debug/square_info_debug.gd" id="10_e4fqb"]
+
+[sub_resource type="Gradient" id="Gradient_ylsv0"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m2ty2"]
+gradient = SubResource("Gradient_ylsv0")
+width = 160
+height = 160
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.844037, 0.119266)
+repeat = 2
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4mr3u"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3ji3m"]
+size = Vector2(60, 60)
 
 [node name="BattleScene" type="Node2D"]
 script = ExtResource("1_3u3cb")
 
+[node name="BattleStateMachine" type="Node" parent="."]
+script = ExtResource("2_i1k06")
+initial_state = NodePath("PreBattle")
+
+[node name="PreBattle" type="Node" parent="BattleStateMachine"]
+script = ExtResource("3_64oey")
+
+[node name="PlayerTurn" type="Node" parent="BattleStateMachine"]
+script = ExtResource("4_2d5dq")
+
+[node name="EnemyTurn" type="Node" parent="BattleStateMachine"]
+script = ExtResource("5_g075w")
+
+[node name="PostBattle" type="Node" parent="BattleStateMachine"]
+script = ExtResource("6_ybnlg")
+
 [node name="Board" type="TileMap" parent="."]
+unique_name_in_owner = true
+tile_set = ExtResource("7_ogoa1")
 format = 2
-layer_0/tile_data = PackedInt32Array(65538, 131073, 1, 3, 196609, 0, 65539, 196609, 1, 4, 1, 2, 65540, 1, 3, 65541, 65537, 3, 196608, 131073, 3, 131073, 196609, 2, 196609, 196609, 3, 131074, 1, 2, 196610, 1, 3, 131075, 65537, 2, 196611, 65537, 3, 131076, 131073, 0, 196612, 131073, 1, 131077, 196609, 0, 196613, 196609, 1, 196614, 1, 1, 262144, 1, 0, 262145, 65537, 0, 327681, 65537, 1, 262146, 131073, 0, 262147, 196609, 0, 327683, 196609, 1, 262148, 1, 2, 327684, 1, 3, 262149, 65537, 2, 327685, 65537, 3, 262150, 131073, 2, 327686, 131073, 3, 327687, 196609, 3, 458752, 131073, 3, 393217, 196609, 2, 458753, 196609, 3, 393218, 1, 2, 458754, 1, 3, 393219, 65537, 2, 458755, 65537, 3, 393220, 131073, 0, 458756, 131073, 1, 393221, 196609, 0, 458757, 196609, 1, 393222, 1, 0, 458758, 1, 1, 393223, 65537, 0, 524290, 1, 0, 524291, 65537, 0, 524292, 131073, 0, 524293, 196609, 0, 589825, 131073, 0, 589826, 196609, 0, 589827, 131073, 0, 589828, 196609, 0, 655364, 1, 0, 655365, 65537, 0, 655366, 131073, 0, 655367, 196609, 0, 589830, 131073, 1, 655362, 196609, 1, 720898, 196609, 0, 655363, 196609, 0, 720899, 131073, 0, 786435, 131073, 1, 720900, 196609, 0, 786436, 196609, 1, 720901, 131073, 0, 786437, 131073, 1, 720902, 196609, 0, 786438, 196609, 1, 524288, 131073, 0, 589824, 131073, 1, 524289, 196609, 0, 655361, 131073, 1, 720897, 131073, 0, 786433, 131073, 1, 786434, 196609, 1, 655360, 131073, 0, 720896, 131073, 1, 720903, 131073, 0, 786439, 131073, 1, 786432, 131073, 0)
+layer_0/name = "Board"
+layer_1/name = "Obstacles"
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Highlight"
+layer_2/tile_data = PackedInt32Array()
 script = ExtResource("1_2r0vp")
 
 [node name="BattleCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(464, 806)
 zoom = Vector2(0.3, 0.3)
 script = ExtResource("2_mkg0k")
 
+[node name="SquareIndicator" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 1, 0, 1)
+texture = SubResource("GradientTexture2D_m2ty2")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 160)
+
 [node name="PlayerPieces" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="EnemyPieces" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TopPanel" type="Panel" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -127.0
+offset_right = 127.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BattleStateLabel" type="Label" parent="UI/TopPanel/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "<BATTLESTATE>"
+
+[node name="LeftPanel" type="Panel" parent="UI"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 188.0
+offset_bottom = -133.0
+grow_vertical = 2
+script = ExtResource("9_aq41o")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/LeftPanel"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerRoster" type="VBoxContainer" parent="UI/LeftPanel/VBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="UI/LeftPanel/VBoxContainer2/PlayerRoster"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Player"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="UI/LeftPanel/VBoxContainer2/PlayerRoster"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+
+[node name="HSeparator" type="HSeparator" parent="UI/LeftPanel/VBoxContainer2"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="ActorDetails" type="VBoxContainer" parent="UI/LeftPanel/VBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Details"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/LeftPanel/VBoxContainer2/ActorDetails"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails/HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Name:"
+
+[node name="ActorName" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails/HBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<NAME>"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/LeftPanel/VBoxContainer2/ActorDetails"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails/HBoxContainer2"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Class:"
+
+[node name="ChessClass" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails/HBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<CHESS_CLASS>"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="UI/LeftPanel/VBoxContainer2/ActorDetails"]
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails/HBoxContainer3"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Level:"
+
+[node name="ClassLevel" type="Label" parent="UI/LeftPanel/VBoxContainer2/ActorDetails/HBoxContainer3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<CLASS_LEVEL>"
+
+[node name="ProfileImage" type="TextureRect" parent="UI/LeftPanel/VBoxContainer2/ActorDetails"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_4mr3u")
+stretch_mode = 5
+
+[node name="RightPanel" type="Panel" parent="UI"]
+auto_translate_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_bottom = -389.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="EnemyRoster" type="VBoxContainer" parent="UI/RightPanel"]
+auto_translate_mode = 1
+layout_mode = 2
+offset_right = 188.0
+offset_bottom = 245.0
+alignment = 1
+
+[node name="Label" type="Label" parent="UI/RightPanel/EnemyRoster"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Enemy"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="UI/RightPanel/EnemyRoster"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+
+[node name="PieceUI" type="Control" parent="UI/RightPanel/EnemyRoster/GridContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="FocusIndicator" type="ColorRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.0210619, 1)
+
+[node name="MemberImage" type="TextureRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_3ji3m")
+stretch_mode = 3
+
+[node name="PieceUI2" type="Control" parent="UI/RightPanel/EnemyRoster/GridContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="FocusIndicator" type="ColorRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI2"]
+auto_translate_mode = 1
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.0210619, 1)
+
+[node name="MemberImage" type="TextureRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI2"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_3ji3m")
+stretch_mode = 3
+
+[node name="PieceUI3" type="Control" parent="UI/RightPanel/EnemyRoster/GridContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="FocusIndicator" type="ColorRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI3"]
+auto_translate_mode = 1
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.0210619, 1)
+
+[node name="MemberImage" type="TextureRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI3"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_3ji3m")
+stretch_mode = 3
+
+[node name="PieceUI4" type="Control" parent="UI/RightPanel/EnemyRoster/GridContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="FocusIndicator" type="ColorRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI4"]
+auto_translate_mode = 1
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.0210619, 1)
+
+[node name="MemberImage" type="TextureRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI4"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_3ji3m")
+stretch_mode = 3
+
+[node name="PieceUI5" type="Control" parent="UI/RightPanel/EnemyRoster/GridContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="FocusIndicator" type="ColorRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI5"]
+auto_translate_mode = 1
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.0210619, 1)
+
+[node name="MemberImage" type="TextureRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI5"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_3ji3m")
+stretch_mode = 3
+
+[node name="PieceUI6" type="Control" parent="UI/RightPanel/EnemyRoster/GridContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="FocusIndicator" type="ColorRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI6"]
+auto_translate_mode = 1
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.0210619, 1)
+
+[node name="MemberImage" type="TextureRect" parent="UI/RightPanel/EnemyRoster/GridContainer/PieceUI6"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_3ji3m")
+stretch_mode = 3
+
+[node name="Debug" type="CanvasLayer" parent="."]
+
+[node name="DebugContainer" type="Control" parent="Debug"]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SquareInfoDebug" type="Panel" parent="Debug/DebugContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -230.0
+offset_top = -186.0
+offset_right = -33.0
+offset_bottom = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("10_e4fqb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Debug/DebugContainer/SquareInfoDebug"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Square Info"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Square"
+
+[node name="SquareCoords" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<SQUARE>"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer2"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Color"
+
+[node name="SquareColor" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<COLOR>"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer3"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Is Blocked"
+
+[node name="IsBlocked" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<BLOCKED>"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer4"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Is Trap"
+
+[node name="IsTrap" type="Label" parent="Debug/DebugContainer/SquareInfoDebug/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "<TRAP>"

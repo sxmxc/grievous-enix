@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="ChessSkill" load_steps=2 format=3 uid="uid://dwosoisxdwpxa"]
+[gd_resource type="Resource" script_class="MoveSkill" load_steps=2 format=3 uid="uid://mwg5bspdsx1e"]
 
-[ext_resource type="Script" path="res://core/resources/chess_skill.gd" id="1_2e8ys"]
+[ext_resource type="Script" path="res://core/resources/move_skill.gd" id="1_77c7l"]
 
 [resource]
-script = ExtResource("1_2e8ys")
+script = ExtResource("1_77c7l")
+captures = Array[Vector2i]([Vector2i(1, -1), Vector2i(-1, -1)])
+move_range_x = 0
+move_range_y = 1
+move_range_diag = 0
+only_forward = true
 skill_name = &"Pawn Training"
 skill_children = Array[StringName]([])
-skill_description = "Move 1 space forward OR Capture 1 space diagonally"
+skill_description = "Basic pawn training"

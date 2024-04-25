@@ -3,21 +3,25 @@
 Dev: [[Hi|Hello|Howdy]], this is some dialogue.
 Dev: Here are some choices.
 - First one- Test State
-	Dev: You picked the first one.
-	Dev: Here is a value set in our state\: {{DataManager.dialogue_state.test_key}}
-	Dev: Now lets set a value. The value right now is\: {{DataManager.dialogue_state.test_int}}
+	Voidmoose: You picked the first one.
+	Voidmoose: Here is a value set in our state\: {{DataManager.dialogue_state.test_key}}
+	Voidmoose: Now lets set a value. The value right now is\: {{DataManager.dialogue_state.test_int}}
+	Voidmoose: I am adding 1 to it.
 	set DataManager.dialogue_state.test_int += 1
-	Dev: The value is now\: {{DataManager.dialogue_state.test_int}}
+	Voidmoose: The value is now\: {{DataManager.dialogue_state.test_int}}
 - Second one- Test Logic
-	Dev: You picked the second one.
-	Dev: Now let's test some logic. 
+	Valaris: You picked the second one.
+	Valaris: Now let's test some logic. 
 	if DataManager.dialogue_state.test_int > 0
-		Dev: You ran through the first test. Good job. 
-		Dev: You should not see this if you did not run through first test.
+		Valaris: You ran through the first test. Good job. 
+		Valaris: You should not see this if you did not run through first test.
 	else
-		Dev: You did not run through the first test. 
-		Dev: If you did, and you are seeing this, logic test is failing
+		Valaris: You did not run through the first test. 
+		Valaris: If you did, and you are seeing this, logic test is failing
+	Valaris: That ends the logic test. 
 - Start again => dev_testing
 - End the conversation => END
-Dev: Don't you feel so special.
+Voidmoose: Don't you feel so special.
+Valaris: As one should.
+Dev: I might as well chime in too. 
 => dev_testing

@@ -18,17 +18,17 @@ var temp_player_roster : Array = [
 	{
 		"actor": "Valaris",
 		"piece_color" : Color.DARK_CYAN,
-		"actor_data" : preload("res://data/actor_data/valaris.tres")
+		"actor_data" : DataManager.actor_database.find("Valaris")
 	},
 	{
-		"actor": "SomeoneElse",
+		"actor": "Dev",
 		"piece_color" : Color.DARK_GREEN,
-		"actor_data" : preload("res://data/actor_data/voidmoose.tres")
+		"actor_data" : DataManager.actor_database.find("Dev")
 	},
 	{
-		"actor": "AndAnother",
+		"actor": "Voidmoose",
 		"piece_color" : Color.DARK_ORANGE,
-		"actor_data" : preload("res://data/actor_data/voidmoose.tres")
+		"actor_data" : DataManager.actor_database.find("Voidmoose")
 	},
 ]
 
@@ -38,7 +38,7 @@ func _ready():
 	BattleEvents.piece_selected.connect(_on_piece_selected)
 	BattleEvents.piece_deselected.connect(_on_piece_deselected)
 	init_player_roster(temp_player_roster)
-	SoundManager.play_music(DataManager.audio_database["battle_song_1"],1)
+	#SoundManager.play_music(DataManager.audio_database.find("battle_song_1"),1)
 	pass # Replace with function body.
 
 
@@ -73,7 +73,6 @@ func update_details():
 	if !selected_piece:
 		return
 	profile_image.texture = selected_piece.actor_data.actor_profile_image
-	class_level.text = "%s" % selected_piece.actor_data.actor_level
 	actor_name.text = selected_piece.actor_data.actor_name
 	chess_class.text = selected_piece.actor_data.actor_chess_class.display_name
 	actor_details.visible = true

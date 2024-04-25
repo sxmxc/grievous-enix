@@ -1,12 +1,11 @@
 [gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://5g1muiff72i4"]
 
-[ext_resource type="Resource" uid="uid://dwosoisxdwpxa" path="res://data/chess_skills/pawn_training.tres" id="1_3hikw"]
+[ext_resource type="Resource" uid="uid://mwg5bspdsx1e" path="res://data/chess_skills/pawn_training.tres" id="1_3hikw"]
 [ext_resource type="Script" path="res://core/resources/chess_class.gd" id="1_axjjl"]
 
 [resource]
 script = ExtResource("1_axjjl")
 display_name = &"Pawn"
-description = ""
 base_value = 0
-base_skill = ExtResource("1_3hikw")
+base_movement_skill = ExtResource("1_3hikw")
 piece_type = 0

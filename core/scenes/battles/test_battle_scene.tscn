@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cthtg8ciw42i2"]
+
+[ext_resource type="PackedScene" uid="uid://1gtht18nrn6g" path="res://core/battle/scenes/battle_scene.tscn" id="1_v4fbc"]
+[ext_resource type="Script" path="res://core/scenes/battles/dev_battle.gd" id="2_e8wcp"]
+
+[node name="TestBattleScene" instance=ExtResource("1_v4fbc")]
+script = ExtResource("2_e8wcp")
+
+[node name="Board" parent="." index="1"]
+board_height = 18

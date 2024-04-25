@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
 
-[ext_resource type="Script" path="res://scenes/dialogue_scenes/balloons/balloon.gd" id="1_36de5"]
+[ext_resource type="Script" path="res://core/dialogue/dialogue_components/balloons/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 
@@ -63,6 +63,9 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tf3ur"]
+size = Vector2(120, 120)
+
 [node name="DefaultBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
@@ -92,11 +95,21 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
 
+[node name="CharacterProfile" type="TextureRect" parent="Balloon/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 138.0
+offset_bottom = 139.0
+texture = SubResource("PlaceholderTexture2D_tf3ur")
+
 [node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 122.0
 grow_horizontal = 2
 grow_vertical = 2
 

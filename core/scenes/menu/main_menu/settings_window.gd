@@ -12,6 +12,6 @@ func _process(delta):
 
 
 func _on_cancel_button_pressed():
-	SoundManager.play_ui_sound(DataManager.audio_database["back03"])
+	SoundManager.play_ui_sound(DataManager.audio_database.find("back03"))
 	hide()
 	pass # Replace with function body.

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MoveSkill" load_steps=2 format=3 uid="uid://bqqgfwjjkknau"]
+
+[ext_resource type="Script" path="res://core/resources/move_skill.gd" id="1_snfq0"]
+
+[resource]
+script = ExtResource("1_snfq0")
+captures = Array[Vector2i]([])
+move_range_x = 10
+move_range_y = 10
+move_range_diag = 10
+only_forward = false
+skill_name = &""
+skill_children = Array[StringName]([])
+skill_description = ""

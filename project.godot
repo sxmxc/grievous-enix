@@ -12,6 +12,7 @@ config_version=5
 
 config/name="grievous-enix"
 config/version="0.0.1"
+run/main_scene="res://core/scenes/menu/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/pxvoidmoose.png"
 config/icon="res://assets/pixLogo.png"
@@ -29,7 +30,7 @@ Panku="*res://addons/panku_console/console.tscn"
 
 [dialogue_manager]
 
-general/balloon_path="res://scenes/dialogue_scenes/balloons/balloon.tscn"
+general/balloon_path="res://core/dialogue/dialogue_components/balloons/balloon.tscn"
 
 [editor_plugins]
 

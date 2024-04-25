@@ -5,6 +5,8 @@ extends Panel
 @onready var square_coords_label = %SquareCoords
 @onready var is_blocked_label = %IsBlocked
 
+@export var board: TileMap
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var board = get_tree().root.get_node("DevBattle/%Board") as TileMap
+	#var board = get_tree().root.get_node("%Board") as TileMap
 	var board_square = board.world_to_board(board.get_global_mouse_position())
 	var square_data = board.get_cell_tile_data(0, board_square) as TileData
 	if !square_data:

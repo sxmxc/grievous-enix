@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AbilitySkill" load_steps=2 format=3 uid="uid://bttiljpiy57j1"]
+
+[ext_resource type="Script" path="res://core/resources/ability_skill.gd" id="1_sgbyu"]
+
+[resource]
+script = ExtResource("1_sgbyu")
+skill_name = &"Assasinate"
+skill_children = Array[StringName]([])
+skill_description = "From out of the shadow, you strike"
