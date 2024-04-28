@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="ChessSkill" load_steps=2 format=3 uid="uid://bcmdbbg7qbmk2"]
-
-[ext_resource type="Script" path="res://core/resources/chess_skill.gd" id="1_u44s8"]
-
-[resource]
-script = ExtResource("1_u44s8")
-skill_name = &"Sidestep"
-skill_children = Array[StringName]([])
-skill_description = "Once per game, after moving, Capture"

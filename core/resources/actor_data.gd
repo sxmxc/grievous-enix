@@ -13,16 +13,15 @@ class_name ActorData
 @export var actor_sp_used: int
 
 func get_moves(pos: Vector2i) -> Array[Vector2i]:
-	var moves : Array[Vector2i] = []
+	var modifier := 0
 	for skill in actor_known_skills:
 		if skill is MoveSkill:
-			for move in skill.get_movements():
-				moves.append(pos + move)
+			modifier += skill.move_modifier
 	for skill in actor_special_skills:
 		if skill is MoveSkill:
-			for move in skill.get_movements():
-				moves.append(pos + move)
-	return moves
+			modifier += skill.move_modifier
+	var base_moves : Array[Vector2i] = actor_chess_class.get_movements(pos, modifier)
+	return base_moves
 
 func get_capture(pos: Vector2i) -> Array[Vector2i]:
 	var captures = []

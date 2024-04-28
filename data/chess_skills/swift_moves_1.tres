@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MoveSkill" load_steps=2 format=3 uid="uid://bh8xrxk1t1n0f"]
+
+[ext_resource type="Script" path="res://core/resources/move_skill.gd" id="1_p11ed"]
+
+[resource]
+script = ExtResource("1_p11ed")
+move_modifier = 1
+skill_name = &"Swift Moves I"
+skill_children = Array[StringName]([])
+skill_description = ""

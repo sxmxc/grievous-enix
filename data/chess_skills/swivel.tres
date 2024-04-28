@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="ChessSkill" load_steps=2 format=3 uid="uid://cilor3nqn8ewy"]
-
-[ext_resource type="Script" path="res://core/resources/chess_skill.gd" id="1_mvkej"]
-
-[resource]
-script = ExtResource("1_mvkej")
-skill_name = &"Swivel"
-skill_children = Array[ExtResource("1_mvkej")]([])
-skill_description = "Move in any direction"

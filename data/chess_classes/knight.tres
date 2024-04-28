@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ChessClass" load_steps=2 format=3 uid="uid://b3wiawqquaf7u"]
+
+[ext_resource type="Script" path="res://core/resources/chess_class.gd" id="1_vhr3l"]
+
+[resource]
+script = ExtResource("1_vhr3l")
+display_name = &"Knight"
+base_value = 0
+piece_type = 0
+base_move_range = 3
+only_forward = false
+l_type = true
+horizontal = false
+vertical = false
+diagonal = false

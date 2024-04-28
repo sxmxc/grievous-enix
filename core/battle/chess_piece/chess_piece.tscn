@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cg0fkw61fjot3"]
+[gd_scene load_steps=13 format=3 uid="uid://cg0fkw61fjot3"]
 
 [ext_resource type="Script" path="res://core/battle/chess_piece/chess_piece.gd" id="1_wvmg2"]
 [ext_resource type="Resource" uid="uid://o27qc4yc2xpu" path="res://data/actor_data/voidmoose.tres" id="2_gja7n"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/hovered.gd" id="5_v8sdm"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_states/dragging.gd" id="6_s464f"]
 [ext_resource type="Script" path="res://core/battle/chess_piece/piece_menu.gd" id="8_7s5km"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="9_7xhhj"]
 
 [sub_resource type="Gradient" id="Gradient_wmqba"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -109,6 +110,25 @@ unique_name_in_owner = true
 auto_translate_mode = 1
 visible = false
 layout_mode = 2
+
+[node name="PhantomPieceCamera2D" type="Node2D" parent="."]
+script = ExtResource("9_7xhhj")
+priority_override = false
+priority = 0
+zoom = Vector2(1, 1)
+follow_mode = 0
+frame_preview = true
+pixel_perfect = false
+limit/draw_limits = false
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+limit/limit_node_target = NodePath("")
+limit/smoothed = false
+tween_parameters = null
+tween_on_load = true
+inactive_update_mode = 0
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

@@ -11,6 +11,8 @@ var prev_position
 var position_before_drag
 var position_before_drag2
 
+@onready var pcam: PhantomCamera2D = %PhantomBattleCamera2D
+
 
 func _ready():
 	BattleEvents.piece_selected.connect(_on_piece_selected)
@@ -42,19 +44,20 @@ func _unhandled_input(event):
 
 
 func set_zoom_level(level: float, new_position = self.get_global_mouse_position()):
-	var old_zoom_level = zoom_level
-	
-	zoom_level = clampf(level, min_zoom, max_zoom)
-	
-
-	var zoom_tween = get_tree().create_tween()
-	zoom_tween.tween_property(self,"zoom",Vector2(zoom_level, zoom_level), .5)
-	
-	if zoom_level == max_zoom || zoom_level == min_zoom:
-		return
-	
-	var pos_tween = get_tree().create_tween()
-	pos_tween.tween_property(self, "global_position", new_position, .5)
+	pcam.set_zoom(Vector2(level, level))
+	#var old_zoom_level = zoom_level
+	#
+	#zoom_level = clampf(level, min_zoom, max_zoom)
+	#
+#
+	#var zoom_tween = get_tree().create_tween()
+	#zoom_tween.tween_property(self,"zoom",Vector2(zoom_level, zoom_level), .5)
+	#
+	#if zoom_level == max_zoom || zoom_level == min_zoom:
+		#return
+	#
+	#var pos_tween = get_tree().create_tween()
+	#pos_tween.tween_property(self, "global_position", new_position, .5)
 
 
 func _on_piece_selected(piece: ChessPiece):

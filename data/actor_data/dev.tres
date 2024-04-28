@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="ActorData" load_steps=6 format=3 uid="uid://bxjvjgdkh1d4g"]
 
+[ext_resource type="Resource" uid="uid://b3wiawqquaf7u" path="res://data/chess_classes/knight.tres" id="1_avqvq"]
 [ext_resource type="Script" path="res://core/resources/actor_data.gd" id="1_lfwng"]
-[ext_resource type="Resource" uid="uid://dku167xt7mpnj" path="res://data/chess_classes/queen.tres" id="1_r5ida"]
 [ext_resource type="Texture2D" uid="uid://dbljhbvyojkts" path="res://assets/actor_profile_images/120x120-3.svg" id="2_rrwrj"]
-[ext_resource type="Resource" uid="uid://bttiljpiy57j1" path="res://data/chess_skills/assasinate.tres" id="3_mogne"]
-[ext_resource type="Resource" uid="uid://bqqgfwjjkknau" path="res://data/chess_skills/queen_training.tres" id="3_n5sym"]
+[ext_resource type="Resource" uid="uid://bh8xrxk1t1n0f" path="res://data/chess_skills/swift_moves_1.tres" id="3_ek537"]
+[ext_resource type="Resource" uid="uid://be8qbeiufwf75" path="res://data/chess_skills/swift_moves_2.tres" id="3_qe3vu"]
 
 [resource]
 script = ExtResource("1_lfwng")
 actor_name = &"Dev"
-actor_chess_class = ExtResource("1_r5ida")
+actor_chess_class = ExtResource("1_avqvq")
 actor_description = "Devy dev dev"
 actor_profile_image = ExtResource("2_rrwrj")
-actor_known_skills = Array[Resource("res://core/resources/chess_skill.gd")]([ExtResource("3_mogne"), ExtResource("3_n5sym")])
+actor_known_skills = Array[Resource("res://core/resources/chess_skill.gd")]([ExtResource("3_ek537"), ExtResource("3_qe3vu")])
 actor_special_skills = Array[Resource("res://core/resources/chess_skill.gd")]([])
 actor_xp = 0
 actor_xp_to_next_level = 0

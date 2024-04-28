@@ -54,7 +54,7 @@ func _on_cancel_button_pressed():
 
 
 func _on_ability_button_pressed():
-	var abilities: Array[AbilitySkill]
+	var abilities: Array[AbilitySkill] = []
 	for skill in actor_data.actor_known_skills:
 		if skill is AbilitySkill:
 			abilities.append(skill)
